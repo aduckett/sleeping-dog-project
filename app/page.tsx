@@ -1,7 +1,10 @@
-"use client";
+// app/page.tsx (Next.js App Router + TypeScript)
+// Paste this file at: app/page.tsx
+// Assumes Tailwind CSS is enabled. If not, I can give you the Tailwind setup next.
+
 import React from "react";
 
-export default function SleepingDogProject() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navbar */}
@@ -172,7 +175,7 @@ export default function SleepingDogProject() {
           <div>
             <h2 className="text-2xl font-bold">Contact</h2>
             <p className="mt-3 text-gray-700">Have a park in mind or want to sponsor a bowl? Send a note.</p>
-            <form className="mt-6 grid grid-cols-1 gap-3">
+            <form className="mt-6 grid grid-cols-1 gap-3" onSubmit={(e) => e.preventDefault()}>
               <input className="border rounded-xl px-4 py-3" placeholder="Name" />
               <input className="border rounded-xl px-4 py-3" placeholder="Email" />
               <textarea className="border rounded-xl px-4 py-3 min-h-[120px]" placeholder="Message" />
