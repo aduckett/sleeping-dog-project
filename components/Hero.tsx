@@ -1,5 +1,6 @@
 import Button from "./ui/Button";
 import Container from "./ui/Container";
+import Image from "next/image";
 
 export default function Hero(){
   return (
@@ -20,12 +21,15 @@ export default function Hero(){
           </div>
           <p className="mt-3 text-xs text-gray-500">Arizona first. Nation next.</p>
         </div>
-        <div className="relative aspect-[4/3] rounded-3xl border bg-gray-50 shadow-inner flex items-center justify-center">
-          <div className="text-center p-6">
-            <div className="text-7xl">🛌🐶</div>
-            <p className="mt-3 text-gray-600">Prototype render placeholder</p>
-            <p className="text-xs text-gray-400">Replace with photos/3D renders of the Sleeping Dog Bowl</p>
-          </div>
+        <div className="relative aspect-[4/3] rounded-3xl border bg-gray-50 shadow-inner overflow-hidden">
+          <Image
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757718028/Untitled_design_1_b4kctn.png"
+            alt="Sleeping Dog cement bowl prototype with lab"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+            priority
+           />
         </div>
       </Container>
     </section>
