@@ -2,20 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root { --radius: 14px; }
 
-
 html, body { height: 100%; }
-
 
 /* Nice default prose */
 .prose p { color: #374151; }
 
-
 /* Gradient helpers */
 .bg-grid {
-background-image: linear-gradient(rgba(17,24,39,0.035) 1px, transparent 1px),
-linear-gradient(90deg, rgba(17,24,39,0.035) 1px, transparent 1px);
-background-size: 24px 24px;
+  background-image: linear-gradient(rgba(17,24,39,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,24,39,0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
