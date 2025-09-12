@@ -1,3 +1,4 @@
+"use client";
 // app/page.tsx (Next.js App Router + TypeScript)
 // Paste this file at: app/page.tsx
 // Assumes Tailwind CSS is enabled. If not, I can give you the Tailwind setup next.
