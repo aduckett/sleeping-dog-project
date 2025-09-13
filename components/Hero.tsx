@@ -1,5 +1,6 @@
 import Button from "./ui/Button";
 import Container from "./ui/Container";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -29,11 +30,13 @@ export default function Hero() {
 
         {/* Right column: image */}
         <div className="relative rounded-3xl border bg-gray-50 shadow-inner overflow-hidden h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px]">
-          <img
+          <Image
             src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757717028/20250912_1539_Cement_Bowl_with_Lab_simple_compose_01k5018ajnfw3sv9h2m6yshhkq_a1bqxi.png"
             alt="Sleeping Dog cement bowl prototype with lab"
-            className="h-full w-full object-cover"
-            loading="lazy"
+            fill
+            sizes="(min-width: 1024px) 44vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+            priority
           />
         </div>
       </Container>
