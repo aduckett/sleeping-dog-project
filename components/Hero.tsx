@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Right column: image */}
         <div className="relative rounded-3xl border bg-gray-50 shadow-inner overflow-hidden h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px]">
           <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757720393/20250912_1622_Logo_Bowl_Design_remix_01k503pw95fevtjt6z7bqksg6g_kv03x9.png"
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757791002/BowlD_wys85h.svg"
             alt="Sleeping Dog cement bowl prototype with lab"
             fill
             sizes="(min-width: 1024px) 44vw, (min-width: 768px) 50vw, 100vw"

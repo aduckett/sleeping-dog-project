@@ -11,14 +11,6 @@ export default function ContactPage(){
         </p>
         <ContactForm />
       </Section>
-
-      <Section id="sponsor" className="bg-gray-50 border-y">
-        <h2 className="text-2xl font-bold">Sponsor Inquiry</h2>
-        <p className="text-gray-700 mt-2">
-          Tell us your preferred tier, location ideas, and any questions. We’ll reply with next steps and timelines.
-        </p>
-        <ContactForm />
-      </Section>
     </>
   );
 }
