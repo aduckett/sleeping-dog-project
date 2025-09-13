@@ -7,20 +7,19 @@ export default function MapEmbed({
 }) {
   if (!src) {
     return (
-      <div className="h-full flex items-center justify-center text-sm text-gray-500">
+      <div className="h-full min-h-[240px] flex items-center justify-center text-sm text-gray-500">
         Add <code>NEXT_PUBLIC_MAP_EMBED_URL</code> to <code>.env.local</code> to show the map embed.
       </div>
     );
   }
-
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-2xl">
+    <div className="relative w-full h-full">
       <iframe
         title={title}
         src={src}
         width="100%"
         height="100%"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full rounded-2xl"
         style={{ border: 0 }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

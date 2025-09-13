@@ -4,7 +4,14 @@
 
 :root { --radius: 14px; }
 
-html, body { height: 100%; }
+/* Improve mobile readability */
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.prose p { color: #374151; line-height: 1.7; }
+
 
 /* Nice default prose */
 .prose p { color: #374151; }

@@ -8,9 +8,10 @@ export default function LocationsPage(){
       <Section>
         <h1 className="text-3xl font-extrabold">Locations</h1>
         <p className="mt-3 text-gray-700">Map of installed & planned bowls.</p>
-        <div className="mt-6 rounded-2xl border bg-white h-[480px] overflow-hidden">
-          <MapEmbed />
-        </div>
+        <div className="mt-6 rounded-2xl border bg-white h-[360px] sm:h-[420px] lg:h-[560px] overflow-hidden">
+  <MapEmbed />
+</div>
+
 
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {LOCATIONS.map((loc) => (

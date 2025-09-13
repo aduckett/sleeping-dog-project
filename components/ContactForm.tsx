@@ -4,7 +4,7 @@ import Button from "./ui/Button";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgvlqweb";
 
-export default function ContactForm(){
+export default function ContactForm() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState<string | null>(null);
@@ -27,7 +27,6 @@ export default function ContactForm(){
         e.preventDefault();
         setLoading(true);
         setErr(null);
-
         const form = e.currentTarget as HTMLFormElement;
         const data = new FormData(form);
 
@@ -56,25 +55,70 @@ export default function ContactForm(){
       {/* Custom subject for your inbox */}
       <input type="hidden" name="_subject" value="Sleeping Dog AZ — Website Inquiry" />
 
+      {/* Name / Email */}
       <div className="grid sm:grid-cols-2 gap-3">
-        <input className="border rounded-2xl px-4 py-3" name="name" placeholder="Your name" required />
-        <input className="border rounded-2xl px-4 py-3" type="email" name="email" placeholder="Email" required />
+        <input
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          name="name"
+          placeholder="Your name"
+          aria-label="Your name"
+          autoComplete="name"
+          autoCapitalize="words"
+          autoCorrect="off"
+          required
+        />
+        <input
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          type="email"
+          name="email"
+          placeholder="Email"
+          aria-label="Email"
+          autoComplete="email"
+          inputMode="email"
+          required
+        />
       </div>
 
+      {/* Org / Phone */}
       <div className="grid sm:grid-cols-2 gap-3">
-        <input className="border rounded-2xl px-4 py-3" name="organization" placeholder="Business / Organization (optional)" />
-        <input className="border rounded-2xl px-4 py-3" name="phone" placeholder="Phone (optional)" />
+        <input
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          name="organization"
+          placeholder="Business / Organization (optional)"
+          aria-label="Business or organization (optional)"
+          autoCapitalize="words"
+          autoCorrect="off"
+        />
+        <input
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          name="phone"
+          placeholder="Phone (optional)"
+          aria-label="Phone (optional)"
+          autoComplete="tel"
+          inputMode="tel"
+        />
       </div>
 
+      {/* Topic / Tier */}
       <div className="grid sm:grid-cols-2 gap-3">
-        <select className="border rounded-2xl px-4 py-3" name="topic" defaultValue="Sponsor inquiry" aria-label="Topic">
+        <select
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          name="topic"
+          defaultValue="Sponsor inquiry"
+          aria-label="Topic"
+        >
           <option>Sponsor inquiry</option>
           <option>Donation question</option>
           <option>Media / press</option>
           <option>General question</option>
         </select>
 
-        <select className="border rounded-2xl px-4 py-3" name="sponsor_tier" defaultValue="" aria-label="Sponsor tier">
+        <select
+          className="border rounded-2xl px-4 py-3 text-base min-h-11"
+          name="sponsor_tier"
+          defaultValue=""
+          aria-label="Sponsor tier"
+        >
           <option value="">Sponsor tier (optional)</option>
           <option value="Community Partner - $100">Community Partner — $100</option>
           <option value="Bowl Sponsor - $500">Bowl Sponsor — $500</option>
@@ -82,33 +126,50 @@ export default function ContactForm(){
         </select>
       </div>
 
+      {/* Location / Logo URL */}
       <input
-        className="border rounded-2xl px-4 py-3"
+        className="border rounded-2xl px-4 py-3 text-base min-h-11"
         name="park_or_trail"
         placeholder="Preferred park or trail (optional)"
+        aria-label="Preferred park or trail (optional)"
+        autoCapitalize="words"
+        autoCorrect="off"
       />
 
       <input
-        className="border rounded-2xl px-4 py-3"
+        className="border rounded-2xl px-4 py-3 text-base min-h-11"
         name="logo_url"
         placeholder="Logo URL (optional, for bowl embedding)"
+        aria-label="Logo URL (optional)"
+        inputMode="url"
+        autoCapitalize="none"
+        autoCorrect="off"
       />
 
+      {/* Message */}
       <textarea
-        className="border rounded-2xl px-4 py-3 min-h-[140px]"
+        className="border rounded-2xl px-4 py-3 text-base min-h-[160px]"
         name="message"
         placeholder="Questions or details: interest in sponsoring, timeline, city, anything we should know."
+        aria-label="Message"
         required
       />
 
-      <label className="flex items-center gap-2 text-sm text-gray-700">
-        <input type="checkbox" name="newsletter_optin" className="h-4 w-4" />
-        Keep me updated on installs & events
+      {/* Opt-in */}
+      <label className="flex items-center gap-2 text-sm text-gray-700 active:opacity-80">
+        <input type="checkbox" name="newsletter_optin" className="h-5 w-5" />
+        <span>Keep me updated on installs & events</span>
       </label>
 
-      {err && <p className="text-sm text-red-600">{err}</p>}
+      {/* Error message (accessible) */}
+      {err && (
+        <p className="text-sm text-red-600" role="alert" aria-live="polite">
+          {err}
+        </p>
+      )}
 
-      <Button className="mt-2" onClick={() => {}}>
+      {/* Submit */}
+      <Button className="mt-2 min-h-11" onClick={() => {}}>
         {loading ? "Sending..." : "Send message"}
       </Button>
 
