@@ -20,7 +20,7 @@ export default function TheBowlPage(){
 
         <div className="mt-8 relative rounded-2xl border bg-gray-50 h-[300px] sm:h-[380px] md:h-[460px] lg:h-[520px] overflow-hidden">
           <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757788803/Untitled_design_3_soxzuf.png"
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757789242/Untitled_design_as9d67.svg"
             alt="Sleeping Dog Project cement bowl render"
             fill
             sizes="(min-width: 1024px) 800px, (min-width: 768px) 700px, 100vw"
