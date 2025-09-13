@@ -21,7 +21,9 @@ export default function Navbar() {
           <Link href="/locations" className="hover:text-black">Locations</Link>
           <Link href="/contact" className="hover:text-black">Contact</Link>
         </nav>
-        <div className="hidden md:block"><Button href="/donate">Donate</Button></div>
+        <div className="hidden md:block">
+  <Button href="https://givebutter.com/sleepingdog">Donate</Button>
+</div>
         <button className="md:hidden p-2" aria-label="Menu" onClick={() => setOpen(!open)}>☰</button>
       </Container>
       {open && (

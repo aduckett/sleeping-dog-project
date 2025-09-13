@@ -6,6 +6,18 @@ export default function Button({ href, children, variant = "solid", className = 
   const cls = variant === "solid"
     ? "inline-flex items-center rounded-2xl bg-black text-white px-5 py-3 text-sm font-semibold shadow hover:opacity-90"
     : "inline-flex items-center rounded-2xl border px-5 py-3 text-sm font-semibold hover:shadow";
-  if (href) return <a href={href} className={`${cls} ${className}`}>{children}</a>;
-  return <button onClick={onClick} className={`${cls} ${className}`}>{children}</button>;
+  if (href) {
+  const external = href.startsWith("http");
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className={`${cls} ${className}`}
+    >
+      {children}
+    </a>
+  );
 }
+}
+

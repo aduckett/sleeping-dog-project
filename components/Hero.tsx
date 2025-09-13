@@ -15,8 +15,12 @@ export default function Hero(){
             Cement <em>Sleeping Dog Bowls</em> for Arizona parks & trails—safe hydration stations that double as public art.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button href="/donate">Donate Now</Button>
-            <Button href="/sponsor" variant="outline">Sponsor a Bowl</Button>
+            <Button href="https://www.gofundme.com/f/SleepingDog" className="no-underline">
+              Fund the First 10 Bowls
+            </Button>
+            <Button href="https://givebutter.com/sleepingdog" variant="outline" className="no-underline">
+              Sponsor or Give Monthly
+            </Button>
             <Button href="/the-bowl" variant="outline">See the Bowl</Button>
           </div>
           <p className="mt-3 text-xs text-gray-500">Arizona first. Nation next.</p>
