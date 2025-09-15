@@ -12,8 +12,8 @@ export interface BowlLocation {
 export const LOCATIONS: BowlLocation[] = [
   // sample rows — replace with yours
   { id: "1", name: "Papago Bark Park", city: "Tempe, AZ", status: "Planned", notes: "Pilot site" },
-{ id: "2", name: "Hole-in-the-Rock Trail (Papago Park)", city: "Phoenix, AZ", status: "Planned", notes: "Pilot site" },
-{ id: "3", name: "Big Butte Loop (Papago Park)", city: "Phoenix, AZ", status: "Planned", notes: "Pilot site" },
+{ id: "2", name: "Eliot Ramada Loop", city: "Phoenix, AZ", status: "Planned", notes: "Pilot site" },
+{ id: "3", name: "Pomelo Dog Park", city: "Phoenix, AZ", status: "Planned", notes: "Pilot site" },
 
 { id: "4", name: "Margaret T. Hance Dog Park", city: "Phoenix, AZ", status: "Planned", notes: "" },
 { id: "5", name: "Steele Indian School Dog Park", city: "Phoenix, AZ", status: "Planned", notes: "" },
