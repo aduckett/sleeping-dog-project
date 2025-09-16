@@ -2,6 +2,8 @@ import Section from "../../components/ui/Section";
 import Button from "../../components/ui/Button";
 import { Droplets, ShieldCheck, Users, AlertTriangle, ThermometerSun } from "lucide-react";
 import FactsStrip from "../../components/FactsStrip";
+import ImpactStats from "../../components/ImpactStats";
+import TimelineRoadmap from "../../components/TimelineRoadmap";
 
 function Feature({ icon: Icon, title, text }: { icon: any; title: string; text: string }) {
   return (
