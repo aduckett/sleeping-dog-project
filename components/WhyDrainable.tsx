@@ -1,6 +1,6 @@
 export default function WhyDrainable() {
   return (
-    <section className="bg-white border-y">
+    <section className="bg-gradient-to-br from-gray-50 via-white to-gray-50 border-y">
       <div className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="text-2xl font-bold">Why Drainable Bowls?</h2>
         <p className="mt-3 text-gray-700">

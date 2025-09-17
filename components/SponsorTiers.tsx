@@ -49,7 +49,7 @@ const TIERS: Tier[] = [
 
 export default function SponsorTiers() {
   return (
-    <section>
+    <section className="bg-gray-50 border-y">
       <div className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-2xl font-bold">Sponsorship Options</h2>
 
@@ -57,9 +57,9 @@ export default function SponsorTiers() {
           {TIERS.map((t) => (
             <div
               key={t.name}
-              className={`rounded-2xl border p-6 bg-white ${
-                t.highlight ? "ring-2 ring-black" : ""
-              }`}
+              className={`rounded-2xl border p-6 bg-white transition hover:shadow-md active:shadow-sm ${
+              t.highlight ? "ring-2 ring-black" : ""
+                 }`}
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold">{t.name}</h3>

@@ -9,6 +9,7 @@ import WhyDrainable from "../../components/WhyDrainable";
 import FactsStrip from "../../components/FactsStrip";
 import TimelineRoadmap from "../../components/TimelineRoadmap";
 import DonorWall from "../../components/DonorWall";
+import AsSeenIn from "../../components/AsSeenIn";
 
 export default function AboutPage() {
   return (
